@@ -1,23 +1,23 @@
 class TeaCup {
-    private String teaType;         
-    private static int totalCups;   
+    String teaType;         
+    static int totalCups;   
 
     
-    public TeaCup(String teaType) {
+    TeaCup(String teaType) {
         this.teaType = teaType;
         totalCups++; 
     }
 
-    public String getTeaType() {
+    String getTeaType() {
         return teaType;
     }
 
-    public static void showTotalCups() {
+    static void showTotalCups() {
         System.out.println("Total cups made: " + totalCups);
     }
 }
 
-public class Solution{
+class Solution{
     public static void main(String[] args) {
         TeaCup cup1 = new TeaCup("Masala Tea");
         TeaCup cup2 = new TeaCup("Green Tea");
