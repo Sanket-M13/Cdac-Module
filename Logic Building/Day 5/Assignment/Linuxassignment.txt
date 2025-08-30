@@ -1,0 +1,286 @@
+cdac@Hypen:~$ ls
+LinuxAssignment  aaa.txt  abc.txt  cdac  dir1  linuxAssignment  one.java  snap  xyz.txt
+cdac@Hypen:~$ cd LinuxAssignment
+cdac@Hypen:~/LinuxAssignment$ touch file1.txt
+cdac@Hypen:~/LinuxAssignment$ mkdir docs
+mkdir: cannot create directory ‘docs’: File exists
+cdac@Hypen:~/LinuxAssignment$ cd docs
+cdac@Hypen:~/LinuxAssignment/docs$ ls
+file1.txt  file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ rm file1.txt file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ cd ..
+cdac@Hypen:~/LinuxAssignment$ mv file1.txt docs
+cdac@Hypen:~/LinuxAssignment$ cd docs/
+cdac@Hypen:~/LinuxAssignment/docs$ ls
+file1.txt
+cdac@Hypen:~/LinuxAssignment/docs$ mv file1.txt file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ ls
+file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ ls -l
+total 0
+-rw-r--r-- 1 cdac cdac 0 Aug 19 15:24 file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ chmod u=rwx,g=,o=r file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ ls -l
+total 0
+-rwx---r-- 1 cdac cdac 0 Aug 19 15:24 file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ cd ..
+cdac@Hypen:~/LinuxAssignment$ ls
+docs  test.txt
+cdac@Hypen:~/LinuxAssignment$ ls -l LinuxAssignment
+ls: cannot access 'LinuxAssignment': No such file or directory
+cdac@Hypen:~/LinuxAssignment$ cd ..
+cdac@Hypen:~$ ls -l
+total 32
+drwxr-xr-x 3 cdac cdac 4096 Aug 19 15:26 LinuxAssignment
+-rw-r--r-- 1 cdac cdac   17 Aug 19 09:03 aaa.txt
+-rw-r--r-- 1 cdac cdac   17 Aug 19 08:57 abc.txt
+drwxr-xr-x 8 cdac cdac 4096 Aug 19 10:16 cdac
+drwxr-xr-x 2 cdac cdac 4096 Aug 18 11:36 dir1
+-rw-r--r-- 1 cdac cdac    0 Aug 18 13:47 linuxAssignment
+-rw-r--r-- 1 cdac cdac  117 Aug 19 12:25 one.java
+drwx------ 4 cdac cdac 4096 Aug 18 04:05 snap
+-rw-r--r-- 1 cdac cdac   17 Aug 19 09:06 xyz.txt
+cdac@Hypen:~$ ls -l LinuxAssignment
+total 8
+drwxr-xr-x 2 cdac cdac 4096 Aug 19 15:27 docs
+-rw-r--r-- 1 cdac cdac   17 Aug 19 09:08 test.txt
+cdac@Hypen:~$ find . -type f -name "*.txt"
+./aaa.txt
+./LinuxAssignment/docs/file2.txt
+./LinuxAssignment/test.txt
+./dir1/aaa.txt
+./xyz.txt
+./abc.txt
+./cdac/file1.txt
+./cdac/colors.txt
+./cdac/file2.txt
+./cdac/g1.txt
+./cdac/numbers.txt
+./cdac/file3.txt
+cdac@Hypen:~$ cat aaa.txt
+hello linux
+hiii
+cdac@Hypen:~$ grep "linux" aaa.txt
+hello linux
+cdac@Hypen:~$ date
+Tue Aug 19 15:40:47 UTC 2025
+cdac@Hypen:~$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:94:82:f9 brd ff:ff:ff:ff:ff:ff
+    inet 172.23.243.220/20 brd 172.23.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe94:82f9/64 scope link
+       valid_lft forever preferred_lft forever
+cdac@Hypen:~$ ls
+LinuxAssignment  aaa.txt  abc.txt  cdac  dir1  linuxAssignment  one.java  snap  xyz.txt
+cdac@Hypen:~$ cd LinuxAssignment/
+cdac@Hypen:~/LinuxAssignment$ ls
+docs  test.txt
+cdac@Hypen:~/LinuxAssignment$ vi file1.txt
+cdac@Hypen:~/LinuxAssignment$ cat file1.txt
+
+Hello Linux
+cdac@Hypen:~/LinuxAssignment$ cd docs
+cdac@Hypen:~/LinuxAssignment/docs$ ls
+file2.txt
+cdac@Hypen:~/LinuxAssignment/docs$ cd ..
+cdac@Hypen:~/LinuxAssignment$ cd ..
+cdac@Hypen:~$ ls
+LinuxAssignment  aaa.txt  abc.txt  cdac  dir1  linuxAssignment  one.java  snap  xyz.txt
+cdac@Hypen:~$ cd LinuxAssignment/
+cdac@Hypen:~/LinuxAssignment$ cat > colors.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+Orange
+Madgenta
+cdac@Hypen:~/LinuxAssignment$ head colors.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+cdac@Hypen:~/LinuxAssignment$ mv colors.txt data.txt
+cdac@Hypen:~/LinuxAssignment$ ls
+data.txt  docs  file1.txt  test.txt
+cdac@Hypen:~/LinuxAssignment$ cat data.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+Orange
+Madgenta
+cdac@Hypen:~/LinuxAssignment$ tail -5 data.txt
+Purple
+White
+Grey
+Orange
+Madgenta
+cdac@Hypen:~/LinuxAssignment$ cat > numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+cdac@Hypen:~/LinuxAssignment$ head -15 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+cdac@Hypen:~/LinuxAssignment$ tail -3 numbers.txt
+18
+19
+20
+cdac@Hypen:~/LinuxAssignment$ cat >> data.txt
+Yellow
+Brown
+Redcdac@Hypen:~/LinuxAssignment$ cat data.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+Orange
+Madgenta
+Yellow
+Brown
+Redcdac@Hypen:~/LinuxAssignment$ uniq data.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+Orange
+Madgenta
+Yellow
+Brown
+Red
+cdac@Hypen:~/LinuxAssignment$ sort data.txt
+Black
+Blue
+Brown
+Brown
+Green
+Grey
+Madgenta
+Orange
+Pink
+Purple
+Red
+Red
+White
+Yellow
+Yellow
+cdac@Hypen:~/LinuxAssignment$ uniq data.txt
+Yellow
+Blue
+Pink
+Green
+Black
+Brown
+Red
+Purple
+White
+Grey
+Orange
+Madgenta
+Yellow
+Brown
+Red
+cdac@Hypen:~/LinuxAssignment$ sort duplicate.txt | uniq
+sort: cannot read: duplicate.txt: No such file or directory
+cdac@Hypen:~/LinuxAssignment$ sort data.txt | uniq
+Black
+Blue
+Brown
+Green
+Grey
+Madgenta
+Orange
+Pink
+Purple
+Red
+White
+Yellow
+cdac@Hypen:~/LinuxAssignment$ cat > fruit.txt
+grapes
+apple
+pappaya
+Tomato
+banana
+banana
+grapes
+pomogrenade
+Pineapple
+strawberry
+cdac@Hypen:~/LinuxAssignment$ sort fruit.txt | uniq
+Pineapple
+Tomato
+apple
+banana
+grapes
+pappaya
+pomogrenade
+strawberry
