@@ -17,7 +17,7 @@ class TeaCup {
     }
 }
 
-public class Solution {
+public class Solution{
     public static void main(String[] args) {
         TeaCup cup1 = new TeaCup("Masala Tea");
         TeaCup cup2 = new TeaCup("Green Tea");
