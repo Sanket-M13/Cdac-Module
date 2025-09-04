@@ -1,8 +1,6 @@
 class BankAccount{
 	private double balance;
 	
-	BankAccount(){}
-	
 	void deposite(double amt){
 		this.balance += amt;
 		System.out.println("Balance Deposite");
