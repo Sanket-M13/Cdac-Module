@@ -1,5 +1,5 @@
-abstract class Shape{
-	abstract double area();
+class Shape{
+	double area(){};
 }
 
 class Rectangle extends Shape{
