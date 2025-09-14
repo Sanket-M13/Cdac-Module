@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class DepartmentEmployeeMapping {
+    public static void main(String[] args) {
+
+        Map<String, List<String>> departmentMap = new HashMap<>();
+
+        departmentMap.put("IT", Arrays.asList("Amit", "Rohan"));
+        departmentMap.put("HR", Arrays.asList("Priya"));
+
+        System.out.print("Department Structure: ");
+        
+		for (Map.Entry<String, List<String>> entry : departmentMap.entrySet()) {
+            System.out.print(entry.getKey() + ": ");
+			System.out.print(String.join(", ", entry.getValue()) + "; ");
+        }
+    }
+}
