@@ -1,6 +1,4 @@
 
-
-
 class LL6{
 	//starting of LL : head ptr
 	Node head;
@@ -24,8 +22,6 @@ class LL6{
 			System.out.print(n.data+" ---> ");
 			n = n.next;
 		}
-		
-		
 	}
 	
 	void insert(int new_data){

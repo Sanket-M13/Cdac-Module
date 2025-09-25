@@ -70,10 +70,6 @@ class BST{
 		else if(key > root.data)
 			root.right = insertdata(root.right, key);
 			return root;
-		
-		
-		
-		
 	}
 	
 	
