@@ -26,6 +26,6 @@ class LinkedListInsert{
 
 	
 	public static void main(String args[]){
-		LinkedLis
+		LinkedListInsert l1 = new LinkedListInsert();
 	}
 }
