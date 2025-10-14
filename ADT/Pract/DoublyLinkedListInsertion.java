@@ -1,4 +1,3 @@
-package com.arsh.linkedlist;
 
 public class DoublyLinkedListInsertion {
     Node head;
