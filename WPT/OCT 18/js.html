@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        a = [10,20,4,0,"hello",true,5.6];
+        console.log(a[4]);
+        console.log(a.length);
+        a.push(54);
+        console.log(a);
+        str ="";
+        for (let index = 0; index < a.length; index++) {
+            str = str + " " +a[index];
+            console.log(str);  
+        }
+
+        for (const temp of a) {
+            console.log(temp);   
+        }
+        console.log("Next Loop ---------");
+
+        a.forEach(element => {
+            console.log(element)
+        });
+        console.log(typeof(a))
+
+        b = [10,5,68,7,15,4,3];
+        d = [10,45,88,62,458,45];
+        max = b[0];
+
+        for(i= 1; i<b.length;i++){
+            if(b[i] > max){
+                max = b[i];    
+            }
+        }
+        console.log(max);
+
+        c = [
+            [10,20,30],
+            [40,50,60,55,88],
+            [48,78,80,90]
+        ]
+        for(i=0;i<c.length; i++){
+            // console.log(c[i]);
+            for(j=0; j<c[i].length; j++){
+                console.log(c[i][j]);
+            }
+        }
+
+        g = [...b,...c[0],...c[1],...c[2]];
+        console.log(g);
+       
+        obj = [{roll: 101, name :"Arun", marks:85, phone:"64531463",hobbies:['dance','gaming','music']
+
+        },
+        {
+           roll: 102, name :"rajesh", marks:89, phone:"64531463",hobbies:['dance','gaming','music'] 
+        },
+        {
+          roll: 103, name :"ram", marks:98, phone:"64531463",hobbies:['dance','gaming','music']    
+        }
+    ];
+        // const {roll,name,marks,phone,hobbies} = obj[2];
+        
+        // console.log(roll);
+        topper = obj[0];
+
+      for(i=1; i<obj.length;i++){
+            if(topper.marks < obj[i].marks){
+                topper = obj[i];
+            }
+      }
+      console.log(topper);
+
+
+      price =25554;
+
+      product = {id:545,name: "Bottel",price}
+      console.log(product);
+    </Script>
+</body>
+</html>
