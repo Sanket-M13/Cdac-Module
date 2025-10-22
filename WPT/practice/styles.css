@@ -1,0 +1,38 @@
+#container{
+    width: 65%;
+    height: 450;
+    background-color: brown;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-top: 89;
+    padding-top: 59;
+    border-radius: 5%;
+}
+
+.input1{
+    
+    margin-top:25 ;
+    margin-bottom:25;
+}
+.i1{
+    width: 69%;
+    height: 30;
+    border: none;
+}
+
+.i2{
+    width:69%;
+    height: 30;
+    border: none;
+    
+}
+
+.button{
+    margin-top: 35;
+    height: 45;
+    font-size: large;
+    font-weight: 600;
+    background-color: wheat;
+    width: 79;
+}
