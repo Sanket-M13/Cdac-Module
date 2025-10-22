@@ -6,9 +6,43 @@
 </head>
 <body>
     <script>
-        console.log(a);
-        var a = 4;
+        let a =5;
+        var d = function show(){
+            if(true){
+                let a = 4;
+                console.log('inside if a = ',a);
+            }
+            console.log('inside if a = ',a);
+        }
+        var obj = 5;
+        console.log(obj);
+        var obj = d;
+        console.log(obj);
+        const l =5;
+       
+        var f = function(a,b) {
+            return a+b;
+            console.log("Hellow");
+        }
+        console.log(f(4,5));
+        var arr = [1,2,3,4,5,6,7,8,9,7,9,5];
+        
 
+        var evenarr = [];
+        arr.forEach((value,index)=>{
+            if(value %2 ==0){
+                evenarr.push(value);
+            }
+        })
+        console.log(evenarr);
+        var even = arr.filter(value => value % 2 == 0);
+
+        console.log(even);
+
+        setTimeout(() => {
+            console.log("Hellow world");
+        }, 1000);
+        
     </script>
 </body>
 </html>
