@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function checkEven(){
+    //         return new Promise((resolve,reject)=>{
+    //         var n = 4;
+
+    //         if(n%2==0){
+    //              resolve("Task complete");
+    //             console.log("Task complete");
+            
+    //         }else{
+    //             reject("Task rejected");
+    //             console.log("Task rejected");
+    //     }
+    //    });
+
+    //     }
+
+    //    checkEven().then((msg)=>{
+    //         console.log(msg);
+    //    }).catch((msg)=>{
+    //         console.log(msg);
+    //    });
+
+       function sum(a,b){
+         return new Promise((resolve,reject)=>{
+            console.log("Started addition");
+            setTimeout(()=>{
+                var c = a+b;
+                resolve(c);
+            },2000);
+        })    
+    }
+    var sumres = sum(2,3);
+    console.log(sumres);
+
+    sumres.then((result)=>{
+        console.log("Sum result",result);
+    }).catch(()=>{});
+    
+    </script>
+    
+</body>
+</html>
