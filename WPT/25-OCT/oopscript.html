@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(id,name,salary){
+                this.name = name;
+                this.id = id;
+                this.phone =546554;
+                this.salary = salary;
+                console.log("Hello world");
+            }
+            show(){
+                console.log("Show: ",this.id,this.name,this.salary);
+                
+            }
+        }
+        var emp1 = new Employee(111,"sanket",98987);
+        console.log(emp1.salary ,emp1.id ,emp1.name);
+        emp1.show();
+        
+        var emp2 = new Employee(123,"rahul",45584);
+        console.log(emp2.salary ,emp2.id ,emp2.name);
+
+        class Circle {
+            constructor(r) {
+                this.r = r;
+            }
+            getArea(){
+                return 3.14 * this.r * this.r
+            }
+            
+            getPerimeter(){
+                return 2 * 3.14 * this.r;
+
+            }
+        }
+        var c1 = new Circle(5);
+        console.log(c1.getArea());
+        console.log(c1.getPerimeter());
+
+        class A {
+            constructor() {
+                this.x = 45;
+            }
+        }
+        class B extends A{
+            constructor() {
+                super();
+
+            }
+        }
+        
+        var bOBJ = new B();
+        console.log(bOBJ.x);
+
+        
+        
+
+
+    </script>
+</body>
+</html>

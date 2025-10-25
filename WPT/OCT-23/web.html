@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" placeholder="Enter password" id = "passwordfield">
+    <button onclick="showPassword()" id = "btn">Show</button>
+    <script>
+        function showPassword(){
+            var fieldObj = document.getElementById("passwordfield");
+            fieldObj.setAttribute("type","text");
+            var btnObj = document.getElementById('btn'); 
+            if(btnObj.innerHTML ==="Show"){
+                fieldObj.setAttribute("type","password");
+                btnObj.innerHTML = "Hide"
+            }else{
+                fieldObj.setAttribute("password","type");
+                btnObj.innerHTML = "Show"
+
+            }
+
+        }
+    </script>
+</body>
+</html>

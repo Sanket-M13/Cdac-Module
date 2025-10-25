@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+   <form action="https://www.google.com" onsubmit="return validate()">
+
+     <input type="text" placeholder="Enter Name" id="name-field" onkeyup="validateName()">
+     <span id="name-error"></span>
+    <br><br>
+     <input type="text" placeholder="Enter Phone" id="phone-field">
+     <span id="phone-error"></span>
+    <br><br>
+     <input type="email" placeholder="Enter email">
+    <br><br>
+    <input type="password" placeholder="Enter password">
+    <br><br>
+    <input type="text" placeholder="Confirm password">
+    <br><br>
+
+    <input type="submit" value="Sign-Up">
+   </form>
+
+   <script>
+    function validateName(){
+        var name = document.getElementById("name-field").value;
+         if(name.length === 0){
+            document.getElementById("name-error").innerHTML="Name is required";
+        }else{
+              document.getElementById("name-error").innerHTML="";
+        }
+    }
+    function validate(){
+        var name = document.getElementById("name-field").value;
+        var phone = document.getElementById("phone-field").value;
+        var isValid = true;
+        var phoneRegex = /^\d{10}$/;
+        if(name.length === 0){
+            document.getElementById("name-error").innerHTML="Name is required";
+            isValid = false;
+        }
+        if(phone.length === 0){
+            document.getElementById("phone-error").innerHTML="Phone is required";
+            isValid = false;
+        }else if(!phoneRegex.test(phone)){
+            document.getElementById("phone-error").innerHTML="Invalid";
+
+
+
+        }
+        return isValid;
+    }
+   </script>
+</body>
+</html>

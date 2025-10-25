@@ -1,0 +1,75 @@
+
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fetchdata()">Fetch data</button>
+    <table border="1", cellspacing = "0" cellpadding = "10">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+    <script>
+       function fetchdata() {
+         const xhr = new XMLHttpRequest();
+        xhr.open('GET',"https://jsonplaceholder.typicode.com/users"); 
+        xhr.send();
+        
+        xhr.onreadystatechange = ()=>{
+            if(xhr.readyState === 4){
+                var responsedata = JSON.parse(xhr.responseText);
+                console.log(responsedata);
+
+                 var tbody = document.getElementById("table-body");
+
+            for (const user of responsedata) {
+                var row = `<tr>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.phone}</td>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                    </tr>`
+                    tbody.innerHTML = tbody.innerHTML + row;
+
+            //    var tr = document.createElement("tr");
+
+            //    var idColumn = document.createElement("td");
+            //    var  nameColumn = document.createElement("td");
+            //    var  phoneColumn = document.createElement("td");
+            //    var  UsernameColumn = document.createElement("td");
+            //    var  emailColumn = document.createElement("td");
+
+            //    idColumn.innerHTML = user.id;
+            //    nameColumn.innerHTML = user.name;
+            //    phoneColumn.innerHTML = user.phone;
+            //    UsernameColumn.innerHTML = user.username;
+            //    emailColumn.innerHTML = user.email;
+
+            //    tr.appendChild(idColumn);
+            //    tr.appendChild(nameColumn);
+            //    tr.appendChild(phoneColumn);
+            //    tr.appendChild(UsernameColumn);
+            //    tr.appendChild(emailColumn);
+
+            //     tbody.appendChild(tr);
+               
+            }
+        }
+       }
+           
+                
+            }
+    </script>
+</body>
+</html>

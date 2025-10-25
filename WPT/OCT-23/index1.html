@@ -1,35 +1,13 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
    
     <title>Document</title>
 </head>
 <body>
+   <!-- Await -->
     <script>
-        // Then and catch With Promise
-    //     function checkEven(){
-    //         return new Promise((resolve,reject)=>{
-    //         var n = 4;
-
-    //         if(n%2==0){
-    //              resolve("Task complete");
-    //             console.log("Task complete");
-            
-    //         }else{
-    //             reject("Task rejected");
-    //             console.log("Task rejected");
-    //     }
-    //    });
-
-    //     }
-
-    //    checkEven().then((msg)=>{
-    //         console.log(msg);
-    //    }).catch((msg)=>{
-    //         console.log(msg);
-    //    });
-
-       function sum(a,b){
+        function sum(a,b){
          return new Promise((resolve,reject)=>{
             console.log("Started addition");
             setTimeout(()=>{
@@ -66,17 +44,25 @@
             }, 1000);
         });
     }
-     sum(2,3).then((result)=>{
-        console.log("Sum result",result);
-        return Factorial(result);
-        
-    }).then((factres)=>{
-        console.log("Factorial is ",factres);
-        return Square(factres);
-    }).then((sqres)=>{
-        console.log('Square is ',sqres);
-        
-    })
+
+    async function calculate() {
+        try {
+            const sumResut = await sum(2,3);
+            console.log("Sum is",sumResut);
+
+            const factres = await Factorial(sumResut);
+            console.log("Factorial is",factres);
+
+            const sqres = await Square(factres);
+            console.log("Square is",sqres);
+            
+
+        } catch (error) {
+            console.log(error);
+        }           
+    }
+    calculate();
+
     </script>
     
 </body>

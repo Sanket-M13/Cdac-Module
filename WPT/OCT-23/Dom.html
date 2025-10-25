@@ -1,0 +1,30 @@
+
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p id="title" >Text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero error eius excepturi, quia fuga fugiat dolorem officia tenetur in numquam, voluptatum iusto! Placeat nobis quidem, vitae velit similique quo corrupti.</p>
+    <div id = "mycontainer">
+
+    </div>
+    <input type="text" placeholder="Enter">
+    <button onclick="handleButtonClick()">Click</button>
+        <script>
+            function handleButtonClick(){
+               var msg =  document.getElementById("title");
+                // msg.innerHTML = "Hello"
+                // msg.remove();
+                msg.style.color ="red"; 
+                msg.style.fontSize ="30"; 
+                msg.style.backgroundColor ="aqua"; 
+
+                var container = document.getElementById("mycontainer");
+                var newElement = document.createElement("h1");
+                newElement.innerHTML = "New h1 element";
+                container.appendChild(newElement);
+        }
+        </script>
+</body>
+</html>
