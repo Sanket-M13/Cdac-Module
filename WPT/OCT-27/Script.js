@@ -29,4 +29,11 @@
 //     console.log("Server is started at 4500");
 // });
 
+import {createServer} from 'http'
 
+const server = createServer((request,response)=>{
+    response.write('Hello World');
+    response.end();
+});
+
+server.listen(4500);

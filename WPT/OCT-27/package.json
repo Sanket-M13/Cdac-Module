@@ -1,0 +1,12 @@
+{
+  "name": "script.js",
+  "version": "1.0.0",
+  "main": "Script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "admin",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
