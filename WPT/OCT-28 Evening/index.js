@@ -34,6 +34,41 @@ app.get('/employee',async (request,response)=>{
     }
 });
 
+app.get("/employee/:id",async (request,response) => {
+
+    try {
+        const [rows] =  await conn.query("SELECT * FROM EMPLOYEE Where EmpId="+request.params.id);
+        console.log(rows);
+        if(rows.length === 0){
+            // response.status(404).send({message:"Employee Not found from id "+request.params.id});
+        }
+        response.status(200).send(rows[0]);
+        
+    } catch (error) {
+          response.status(500).send({message:"Something went Wrong"});
+    }
+    
+});
+
+app.delete("/employee/:id",async (request,response)=>{
+      try {
+        const [deleteResult] = await conn.query(
+      "DELETE FROM EMPLOYEE WHERE EmpId = ?",
+      [request.params.id] );
+      console.log(deleteResult.affectedRows);
+      if(deleteResult.affectedRows === 0){
+        response.status(404).send({message:"Employee Not found"});
+      }else{
+        response.status(200).send({message:"Deleted"});
+      }
+      
+        // response.status(200).send("Deleted");
+        
+    } catch (error) {
+          response.status(500).send({message:"Something went Wrong"});
+    }
+});
+
 app.get("/",(request,response)=>{
     response.send({message:"Welcome to employee crud"});
 });
