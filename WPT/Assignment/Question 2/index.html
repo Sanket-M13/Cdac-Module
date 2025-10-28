@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <title>Question 2</title>
+  </head>
+  <body>
+    <form id="form" onsubmit="display()">
+      <label>First Name</label>
+      <br />
+      <input type="text" id="First-name" placeholder="Name" />
+      <br />
+      <label for="last-name">Last Name</label>
+      <br />
+      <input type="text" id="last-name" placeholder="Enter Last name" />
+      <br />
+      <label>Contact No</label>
+      <br />
+      <input type="text" placeholder="Enter Contact No" id="Contact-field" />
+      <br />
+      <label>Email</label>
+      <br />
+      <input type="text" placeholder="Enter Email" id="Email-field" />
+    </form>
+    <button onclick="display()">Submit</button>
+
+    <hr>
+
+    <h3>Details</h3>
+    <p id="output"></p>
+  </body>
+
+  <script>
+    function display() {
+      let firstName = document.getElementById("First-name").value;
+      let lastName = document.getElementById("last-name").value;
+      let contact = document.getElementById("Contact-field").value;
+      let email = document.getElementById("Email-field").value;
+
+        document.getElementById('output').innerHTML = 
+        `<strong>First Name </strong> ${firstName} <br>
+        <strong>Last Name </strong> ${lastName} <br>
+        <strong>Contact </strong> ${contact} <br>
+        <strong>Eamil </strong> ${email} <br>
+        `;
+    }
+  </script>
+</html>
