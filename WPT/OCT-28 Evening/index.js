@@ -42,7 +42,7 @@ app.get("/employee/:id",async (request,response) => {
         if(rows.length === 0){
             // response.status(404).send({message:"Employee Not found from id "+request.params.id});
         }
-        response.status(200).send(rows[0]);
+        response.status(200).send(rows);
         
     } catch (error) {
           response.status(500).send({message:"Something went Wrong"});
@@ -74,8 +74,6 @@ app.get("/",(request,response)=>{
 });
 
 //Crud; Create Read Update Delete
-
-
 
 
 app.listen(4900,()=>{
