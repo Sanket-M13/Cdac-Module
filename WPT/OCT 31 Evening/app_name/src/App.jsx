@@ -1,6 +1,7 @@
 import { Scoreboard } from "./Scorebord";
 import './App.css'
 import { Scorecard } from "./Scorecard";
+import { UserData } from "./usersData";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Scoreboard />
       <Scorecard />
+      <UserData />
     </>
   )
 }

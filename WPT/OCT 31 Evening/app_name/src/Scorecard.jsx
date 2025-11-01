@@ -3,7 +3,6 @@ import { useState } from "react";
 export function Scorecard() {
     const [score,setScore] =  useState(0);
     // const [playerName, setPlayerName] = useState("Raj");
-    
     const increment = () => {
         setScore(score + 4);
     }

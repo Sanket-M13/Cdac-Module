@@ -17,6 +17,11 @@ export class Scoreboard extends Component {
     decrementScore(){
         this.setState({score : this.state.score - 1});
     }
+
+    componentDidMount(){
+        console.log("inside did mount");
+    }
+
     render(){
         return(
             <div>
